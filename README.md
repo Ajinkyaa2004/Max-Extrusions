@@ -140,7 +140,7 @@ The platform integrates a professional email workflow to ensure
 <hr/>
 
 <h2 style="text-align:center; font-size:26px;">
-Crafted with precision by <b>AJINKYA DHUMAL</b> (SYNERGY THREE)
+Crafted with precision by <b>AJINKYA DHUMAL</b>
 </h2>
 
 ---
