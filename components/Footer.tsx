@@ -78,17 +78,31 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-4 text-gray-400">
                 <MapPin className="w-5 h-5 text-accent-royal mt-1 shrink-0" />
-                <span className="text-sm leading-relaxed">
-                  Survey No.688/13 Siddhivinayak Industrial Estate, Somnath Daman, India - 396210
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-sm leading-relaxed">
+                    Survey No.688/13 Siddhivinayak Industrial Estate, Somnath Daman, India - 396210
+                  </span>
+                  <a
+                    href="https://www.google.com/maps/search/Siddhivinayak+Industrial+Estate,+Somnath+Daman,+India+-+396210/@20.403294,72.844977,14z/data=!3m1!4b1?hl=en&entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-accent-royal hover:text-white transition-colors mt-1 hover:underline"
+                  >
+                    View on Google Map
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-4 text-gray-400">
                 <Phone className="w-5 h-5 text-accent-royal shrink-0" />
-                <span>+91-6359313912</span>
+                <a href="tel:+916359313912" className="hover:text-white transition-colors">
+                  +91-6359313912
+                </a>
               </li>
               <li className="flex items-center gap-4 text-gray-400">
                 <Mail className="w-5 h-5 text-accent-royal shrink-0" />
-                <span>maxextpvtltd@gmail.com</span>
+                <a href="mailto:maxextpvtltd@gmail.com" className="hover:text-white transition-colors">
+                  maxextpvtltd@gmail.com
+                </a>
               </li>
             </ul>
           </div>
