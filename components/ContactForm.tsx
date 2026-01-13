@@ -1,184 +1,155 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Send, User, Mail, Phone, MessageSquare, FileText } from 'lucide-react';
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    product: '',
-    quantity: '',
-    message: '',
-  });
-
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('submitting');
-
-    // Simulate form submission
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({
+    const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
-        company: '',
-        product: '',
-        quantity: '',
-        message: '',
-      });
-    }, 1500);
-  };
+        subject: '',
+        message: ''
+    });
 
-  return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid md:grid-cols-2 gap-6">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-            Full Name *
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-            Email Address *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
-          />
-        </div>
-      </div>
+    const [isLoading, setIsLoading] = useState(false);
+    const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-      <div className="grid md:grid-cols-2 gap-6">
-        <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
-            Phone Number *
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
-          />
-        </div>
-        <div>
-          <label htmlFor="company" className="block text-sm font-medium text-charcoal mb-2">
-            Company Name
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
-          />
-        </div>
-      </div>
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsLoading(true);
 
-      <div className="grid md:grid-cols-2 gap-6">
-        <div>
-          <label htmlFor="product" className="block text-sm font-medium text-charcoal mb-2">
-            Product Interest
-          </label>
-          <select
-            id="product"
-            name="product"
-            value={formData.product}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
-          >
-            <option value="">Select a product</option>
-            <option value="carry-bags">Plastic Carry Bags</option>
-            <option value="garbage-bags">Garbage Bags</option>
-            <option value="courier-bags">Courier Bags</option>
-            <option value="stretch-wrap">Stretch Wrap</option>
-            <option value="films">Plastic Films</option>
-            <option value="custom">Custom Solution</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="quantity" className="block text-sm font-medium text-charcoal mb-2">
-            Estimated Quantity
-          </label>
-          <input
-            type="text"
-            id="quantity"
-            name="quantity"
-            value={formData.quantity}
-            onChange={handleChange}
-            placeholder="e.g., 10,000 units/month"
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
-          />
-        </div>
-      </div>
+        // Simulate API call
+        setTimeout(() => {
+            setIsLoading(false);
+            setStatus('success');
+            setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+            setTimeout(() => setStatus('idle'), 5000);
+        }, 1500);
+    };
 
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-          Message / Requirements
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={5}
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent resize-none"
-        />
-      </div>
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    };
 
-      {status === 'success' && (
-        <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-md">
-          Thank you for your enquiry! We&apos;ll get back to you within 24 hours.
-        </div>
-      )}
+    return (
+        <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium text-gray-700 ml-1">Full Name</label>
+                    <div className="relative group">
+                        <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-accent-navy transition-colors" />
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            value={formData.name}
+                            onChange={handleChange}
+                            placeholder="John Doe"
+                            className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-accent-navy focus:ring-4 focus:ring-accent-navy/10 outline-none transition-all bg-gray-50/50 focus:bg-white placeholder:text-gray-400"
+                        />
+                    </div>
+                </div>
 
-      {status === 'error' && (
-        <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-md">
-          Something went wrong. Please try again or contact us directly.
-        </div>
-      )}
+                <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium text-gray-700 ml-1">Email Address</label>
+                    <div className="relative group">
+                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-accent-navy transition-colors" />
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="john@example.com"
+                            className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-accent-navy focus:ring-4 focus:ring-accent-navy/10 outline-none transition-all bg-gray-50/50 focus:bg-white placeholder:text-gray-400"
+                        />
+                    </div>
+                </div>
+            </div>
 
-      <button
-        type="submit"
-        disabled={status === 'submitting'}
-        className="w-full bg-accent-navy text-white px-8 py-4 rounded-md font-medium hover:bg-accent-royal transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {status === 'submitting' ? 'Sending...' : 'Submit Enquiry'}
-      </button>
+            <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-medium text-gray-700 ml-1">Phone Number</label>
+                    <div className="relative group">
+                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-accent-navy transition-colors" />
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="+91 98765 43210"
+                            className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-accent-navy focus:ring-4 focus:ring-accent-navy/10 outline-none transition-all bg-gray-50/50 focus:bg-white placeholder:text-gray-400"
+                        />
+                    </div>
+                </div>
 
-      <p className="text-sm text-gray-600 text-center">
-        * Required fields. We respect your privacy and will never share your information.
-      </p>
-    </form>
-  );
+                <div className="space-y-2">
+                    <label htmlFor="subject" className="text-sm font-medium text-gray-700 ml-1">Subject</label>
+                    <div className="relative group">
+                        <FileText className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-accent-navy transition-colors" />
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            required
+                            value={formData.subject}
+                            onChange={handleChange}
+                            placeholder="Project Inquiry"
+                            className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-accent-navy focus:ring-4 focus:ring-accent-navy/10 outline-none transition-all bg-gray-50/50 focus:bg-white placeholder:text-gray-400"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium text-gray-700 ml-1">Message</label>
+                <div className="relative group">
+                    <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-accent-navy transition-colors" />
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Tell us about your requirements..."
+                        rows={4}
+                        className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-accent-navy focus:ring-4 focus:ring-accent-navy/10 outline-none transition-all resize-none bg-gray-50/50 focus:bg-white placeholder:text-gray-400"
+                    />
+                </div>
+            </div>
+
+            <div className="pt-2">
+                <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full bg-gradient-to-r from-accent-navy to-accent-royal text-white font-bold py-4 rounded-xl shadow-lg shadow-accent-navy/20 hover:shadow-xl hover:shadow-accent-navy/30 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed group"
+                >
+                    {isLoading ? (
+                        <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    ) : (
+                        <>
+                            Send Message
+                            <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </>
+                    )}
+                </button>
+            </div>
+
+            {status === 'success' && (
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="p-4 bg-green-50 text-green-700 rounded-xl flex items-center gap-3 border border-green-200"
+                >
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                    <p className="font-medium">Message sent successfully! We'll get back to you soon.</p>
+                </motion.div>
+            )}
+        </form>
+    );
 }

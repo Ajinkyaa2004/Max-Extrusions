@@ -154,7 +154,7 @@ export default function ClientsPage() {
                     "Cello World",
                     "Nilkamal Ltd",
                     "Vactech Composite Pvt Ltd",
-                    "Jivraj T Pvt Ltd",
+                    "Jivraj Tea Pvt Ltd",
                     "Allure Gift Wraps Pvt Ltd",
                     "Zetts Cosmetics Pvt Ltd"
                   ].map((client, index) => (
