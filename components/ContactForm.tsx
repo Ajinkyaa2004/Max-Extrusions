@@ -55,7 +55,7 @@ export default function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-red focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
           />
         </div>
         <div>
@@ -69,7 +69,7 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-red focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
           />
         </div>
       </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
             required
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-red focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
           />
         </div>
         <div>
@@ -99,7 +99,7 @@ export default function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-red focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
           />
         </div>
       </div>
@@ -114,7 +114,7 @@ export default function ContactForm() {
             name="product"
             value={formData.product}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-red focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
           >
             <option value="">Select a product</option>
             <option value="carry-bags">Plastic Carry Bags</option>
@@ -137,7 +137,7 @@ export default function ContactForm() {
             value={formData.quantity}
             onChange={handleChange}
             placeholder="e.g., 10,000 units/month"
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-red focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent"
           />
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-red focus:border-transparent resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-navy focus:border-transparent resize-none"
         />
       </div>
 
@@ -171,7 +171,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full bg-accent-red text-white px-8 py-4 rounded-md font-medium hover:bg-accent-orange transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-accent-navy text-white px-8 py-4 rounded-md font-medium hover:bg-accent-royal transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === 'submitting' ? 'Sending...' : 'Submit Enquiry'}
       </button>

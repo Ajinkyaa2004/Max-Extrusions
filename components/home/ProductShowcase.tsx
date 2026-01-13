@@ -12,8 +12,8 @@ export default function ProductShowcase() {
     return (
         <section className="py-16 bg-gray-50 relative overflow-hidden">
             {/* Background Decorative Blobs */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-orange/5 rounded-full blur-3xl mix-blend-multiply filter opacity-70"></div>
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-accent-red/5 rounded-full blur-3xl mix-blend-multiply filter opacity-70"></div>
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-royal/5 rounded-full blur-3xl mix-blend-multiply filter opacity-70"></div>
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-accent-navy/5 rounded-full blur-3xl mix-blend-multiply filter opacity-70"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
@@ -23,13 +23,13 @@ export default function ProductShowcase() {
                         viewport={{ once: true }}
                         className="max-w-xl"
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-red/10 text-accent-red text-xs font-medium mb-3">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-navy/10 text-accent-navy text-xs font-medium mb-3">
                             <Sparkles className="w-3 h-3" />
                             Featured Collection
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                             Precision Engineered <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-red to-accent-orange">Packaging Solutions</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-navy to-accent-royal">Packaging Solutions</span>
                         </h2>
                         <p className="text-gray-500 text-base">
                             Explore our range of high-performance products designed for durability and sustainability.

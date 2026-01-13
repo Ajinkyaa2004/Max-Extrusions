@@ -18,8 +18,8 @@ export default function CTASection() {
                     {/* Dynamic Background */}
                     <div className="absolute inset-0">
                         {/* Abstract Gradient Mesh */}
-                        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-orange/10 rounded-full blur-[100px] mix-blend-screen -translate-y-1/2 translate-x-1/2 animate-pulse-slow"></div>
-                        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-red/10 rounded-full blur-[80px] mix-blend-screen translate-y-1/2 -translate-x-1/2"></div>
+                        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-royal/10 rounded-full blur-[100px] mix-blend-screen -translate-y-1/2 translate-x-1/2 animate-pulse-slow"></div>
+                        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-navy/10 rounded-full blur-[80px] mix-blend-screen translate-y-1/2 -translate-x-1/2"></div>
 
                         {/* Noise Texture Overlay */}
                         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.05]"></div>
@@ -49,7 +49,7 @@ export default function CTASection() {
                                 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight"
                             >
                                 Let&apos;s Shape the <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-red via-accent-orange to-amber-500">
+                                <span className="text-accent-royal">
                                     Future Together
                                 </span>
                             </motion.h2>
@@ -92,42 +92,89 @@ export default function CTASection() {
 
                         {/* Visual Side */}
                         <div className="relative hidden lg:block h-full min-h-[400px]">
-                            {/* Floating Glass Card 1 */}
+                            {/* Floating Glass Card 1 - Top Right - Support */}
                             <motion.div
-                                initial={{ opacity: 0, y: 50, rotate: -6 }}
-                                whileInView={{ opacity: 1, y: 0, rotate: -6 }}
+                                initial={{ opacity: 0, scale: 0.8, rotate: -6 }}
+                                whileInView={{ opacity: 1, scale: 1, rotate: -6 }}
+                                animate={{
+                                    y: [0, -15, 0],
+                                    rotate: -6
+                                }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.6, duration: 0.8 }}
-                                className="absolute top-10 right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-2xl w-64 shadow-2xl"
+                                transition={{
+                                    delay: 0.6,
+                                    duration: 0.8,
+                                    y: {
+                                        duration: 6,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }
+                                }}
+                                className="absolute top-10 right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-5 rounded-2xl w-60 shadow-2xl z-20"
                             >
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="p-3 bg-green-500/20 rounded-lg">
-                                        <PhoneCall className="w-6 h-6 text-green-400" />
+                                <div className="flex items-center gap-4 mb-3">
+                                    <div className="p-2.5 bg-green-500/20 rounded-lg">
+                                        <PhoneCall className="w-5 h-5 text-green-400" />
                                     </div>
                                     <div>
-                                        <div className="text-xs text-gray-400">Support</div>
-                                        <div className="text-white font-bold">24/7 Active</div>
+                                        <div className="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Support</div>
+                                        <div className="text-white font-bold text-sm">24/7 Active</div>
                                     </div>
                                 </div>
-                                <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                                    <div className="h-full bg-green-500 w-[90%]"></div>
+                                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                                    <div className="h-full bg-green-500 w-[90%] shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
                                 </div>
                             </motion.div>
 
-                            {/* Floating Glass Card 2 */}
+                            {/* Floating Glass Card 2 - Bottom Left - Satisfaction */}
                             <motion.div
-                                initial={{ opacity: 0, y: 80, rotate: 6 }}
-                                whileInView={{ opacity: 1, y: 0, rotate: 6 }}
+                                initial={{ opacity: 0, scale: 0.8, rotate: 6 }}
+                                whileInView={{ opacity: 1, scale: 1, rotate: 6 }}
+                                animate={{
+                                    y: [0, -20, 0],
+                                    rotate: 6
+                                }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.8, duration: 0.8 }}
-                                className="absolute bottom-20 left-10 bg-linear-to-br from-accent-red to-accent-orange p-6 rounded-2xl w-72 shadow-[0_20px_50px_rgba(200,64,52,0.3)]"
+                                transition={{
+                                    delay: 0.8,
+                                    duration: 0.8,
+                                    y: {
+                                        duration: 7,
+                                        repeat: Infinity,
+                                        ease: "easeInOut",
+                                        delay: 1 // offset animation
+                                    }
+                                }}
+                                className="absolute bottom-12 left-10 overflow-hidden p-6 rounded-2xl w-72 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-30 group"
                             >
-                                <h3 className="text-white font-bold text-2xl mb-2">100%</h3>
-                                <p className="text-white/90 text-sm mb-4">Guaranteed Satisfaction on all bulk orders.</p>
-                                <div className="flex -space-x-2">
-                                    {[1, 2, 3, 4].map(i => (
-                                        <div key={i} className="w-8 h-8 rounded-full bg-white/20 border-2 border-accent-red" />
-                                    ))}
+                                {/* Live Animated Background - Subtle Breathing Effect */}
+                                <motion.div
+                                    className="absolute inset-0 bg-gradient-to-br from-accent-navy via-accent-royal to-blue-600"
+                                    animate={{
+                                        backgroundSize: ["100% 100%", "150% 150%", "100% 100%"],
+                                        backgroundPosition: ["0% 0%", "50% 50%", "0% 0%"],
+                                    }}
+                                    transition={{
+                                        duration: 10,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }}
+                                />
+
+                                {/* Overlay for depth */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-50"></div>
+
+                                <div className="relative z-10">
+                                    <div className="flex items-start justify-between mb-2">
+                                        <h3 className="text-white font-bold text-3xl">100%</h3>
+                                        <div className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)] animate-pulse"></div>
+                                    </div>
+                                    <p className="text-white/90 text-sm mb-5 leading-snug">Guaranteed Satisfaction on all bulk orders.</p>
+                                    <div className="flex -space-x-2">
+                                        {[1, 2, 3, 4].map(i => (
+                                            <div key={i} className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20" />
+                                        ))}
+                                    </div>
                                 </div>
                             </motion.div>
                         </div>

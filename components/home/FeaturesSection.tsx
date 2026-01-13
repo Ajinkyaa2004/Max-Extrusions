@@ -26,7 +26,7 @@ const features = [
         icon: IndianRupee,
         title: "Reasonable Prices",
         description: "Offering high-quality products at competitive rates with easy payment terms.",
-        color: "from-accent-orange to-accent-red"
+        color: "from-accent-royal to-accent-navy"
     }
 ];
 
@@ -54,7 +54,7 @@ export default function FeaturesSection() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-bold mb-6"
                     >
-                        Our <span className="text-accent-orange">Commitment</span>
+                        Our <span className="text-accent-royal">Commitment</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}

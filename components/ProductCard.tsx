@@ -25,13 +25,13 @@ export default function ProductCard({ name, description, image, slug }: ProductC
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Badge */}
-        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-accent-red opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-sm">
+        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-accent-navy opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-sm">
           Premium Quality
         </div>
       </div>
 
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-accent-red transition-colors">
+        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-accent-navy transition-colors">
           {name}
         </h3>
         <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
@@ -41,7 +41,7 @@ export default function ProductCard({ name, description, image, slug }: ProductC
         {/* Using the new Accent Button Variant */}
         <Button
           href={`/products/${slug}`}
-          variant="accent"
+          variant="primary"
           className="w-full justify-center"
           icon={<ArrowRight className="w-4 h-4" />}
         >

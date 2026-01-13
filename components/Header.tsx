@@ -32,15 +32,15 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-lg py-2'
-          : 'bg-transparent py-4'
+        ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-lg py-2'
+        : 'bg-transparent py-4'
         }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group relative z-50">
-            <div className={`p-2 rounded-xl transition-all duration-300 ${scrolled ? 'bg-gradient-to-br from-accent-red to-accent-orange text-white' : 'bg-white/10 backdrop-blur-md text-white border border-white/20'
+            <div className={`p-2 rounded-xl transition-all duration-300 ${scrolled ? 'bg-gradient-to-br from-accent-navy to-accent-royal text-white' : 'bg-white/10 backdrop-blur-md text-white border border-white/20'
               }`}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -48,7 +48,7 @@ export default function Header() {
             </div>
             <div className="text-2xl font-bold">
               <span className={scrolled ? 'text-charcoal' : 'text-white'}>MAX</span>
-              <span className={scrolled ? 'text-accent-red' : 'text-accent-orange'}>EXTRUSIONS</span>
+              <span className={scrolled ? 'text-accent-navy' : 'text-accent-royal'}>EXTRUSIONS</span>
             </div>
           </Link>
 
@@ -58,7 +58,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 group ${scrolled ? 'text-gray-700 hover:text-accent-red' : 'text-white/90 hover:text-white'
+                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 group ${scrolled ? 'text-gray-700 hover:text-accent-navy' : 'text-white/90 hover:text-white'
                   }`}
               >
                 {item.name}
@@ -70,8 +70,8 @@ export default function Header() {
               <Link
                 href="/contact"
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${scrolled
-                    ? 'bg-gradient-to-r from-accent-red to-accent-orange text-white hover:shadow-accent-red/20'
-                    : 'bg-white text-accent-red hover:bg-gray-50'
+                  ? 'bg-gradient-to-r from-accent-navy to-accent-royal text-white hover:shadow-accent-navy/20'
+                  : 'bg-white text-accent-navy hover:bg-gray-50'
                   }`}
               >
                 Request Quote
@@ -114,7 +114,7 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-accent-red transition-colors" />
+                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-accent-navy transition-colors" />
                   </Link>
                 </motion.div>
               ))}
@@ -128,7 +128,7 @@ export default function Header() {
             >
               <Link
                 href="/contact"
-                className="block w-full bg-gradient-to-r from-accent-red to-accent-orange text-white text-center py-4 rounded-xl font-bold shadow-lg shadow-accent-red/30"
+                className="block w-full bg-gradient-to-r from-accent-navy to-accent-royal text-white text-center py-4 rounded-xl font-bold shadow-lg shadow-accent-navy/30"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get a Quote

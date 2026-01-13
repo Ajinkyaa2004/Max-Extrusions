@@ -24,9 +24,9 @@ export default function Button({
 
   const variantStyles = {
     primary: `
-      bg-gradient-to-r from-accent-red to-accent-orange text-white 
-      shadow-[0_4px_14px_0_rgba(200,64,52,0.39)] 
-      hover:shadow-[0_6px_20px_rgba(200,64,52,0.23)] 
+      bg-gradient-to-r from-accent-navy to-accent-royal text-white 
+      shadow-[0_4px_14px_0_rgba(0,33,71,0.39)] 
+      hover:shadow-[0_6px_20px_rgba(0,33,71,0.23)] 
       hover:scale-[1.02] active:scale-[0.98]
       border border-transparent
     `,
@@ -43,14 +43,14 @@ export default function Button({
       hover:scale-[1.02] active:scale-[0.98]
     `,
     accent: `
-      bg-white text-accent-red border border-gray-200
-      hover:border-accent-red hover:bg-accent-red hover:text-white
+      bg-white text-accent-navy border border-gray-200
+      hover:border-accent-navy hover:bg-accent-navy hover:text-white
       shadow-sm hover:shadow-md
       hover:scale-[1.02] active:scale-[0.98]
     `,
     ghost: `
-      bg-transparent text-gray-600 hover:text-accent-red
-      hover:bg-accent-red/5
+      bg-transparent text-gray-600 hover:text-accent-navy
+      hover:bg-accent-navy/5
     `
   };
 

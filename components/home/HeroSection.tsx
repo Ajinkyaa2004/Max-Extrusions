@@ -11,7 +11,7 @@ export default function HeroSection() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/hero-bg.png"
+                    src="/images/hero-bg-blue.png"
                     alt="Max Extrusions Factory"
                     fill
                     className="object-cover"
@@ -38,8 +38,8 @@ export default function HeroSection() {
                             transition={{ delay: 0.2, duration: 0.5 }}
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6"
                         >
-                            <span className="flex h-2 w-2 rounded-full bg-accent-orange animate-pulse"></span>
-                            <span className="text-sm font-medium text-white/90 tracking-wide">Established 1968</span>
+                            <span className="flex h-2 w-2 rounded-full bg-accent-royal animate-pulse"></span>
+                            <span className="text-sm font-medium text-white/90 tracking-wide">Established 2008</span>
                         </motion.div>
 
                         <motion.h1
@@ -49,7 +49,7 @@ export default function HeroSection() {
                             className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6"
                         >
                             Setting New Standards of <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-orange via-accent-red to-amber-500">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-400 to-cyan-300">
                                 Client Satisfaction
                             </span>
                         </motion.h1>
@@ -68,10 +68,10 @@ export default function HeroSection() {
                             initial={{ opacity: 0, borderLeftWidth: 0 }}
                             animate={{ opacity: 1, borderLeftWidth: 4 }}
                             transition={{ delay: 0.7, duration: 0.5 }}
-                            className="mb-8 pl-6 border-l-4 border-accent-orange bg-white/5 p-4 rounded-r-xl backdrop-blur-sm max-w-lg"
+                            className="mb-8 pl-6 border-l-4 border-accent-royal bg-white/5 p-4 rounded-r-xl backdrop-blur-sm max-w-lg"
                         >
                             <div className="flex gap-2 text-white/90 italic text-lg leading-relaxed font-light">
-                                <Quote className="w-8 h-8 text-accent-red opacity-50 -mt-2 rotate-180" />
+                                <Quote className="w-8 h-8 text-accent-navy opacity-50 -mt-2 rotate-180" />
                                 <p>&quot;Our company is growing in leaps and bounds under the headship of Mr. Deepak Mistry.&quot;</p>
                             </div>
                         </motion.div>
@@ -99,11 +99,11 @@ export default function HeroSection() {
                             className="mt-12 flex items-center gap-8 text-white/60"
                         >
                             <div className="flex items-center gap-2">
-                                <CheckCircle className="w-5 h-5 text-accent-orange" />
+                                <CheckCircle className="w-5 h-5 text-accent-royal" />
                                 <span className="text-sm font-medium">Ethical Business Approach</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <CheckCircle className="w-5 h-5 text-accent-orange" />
+                                <CheckCircle className="w-5 h-5 text-accent-royal" />
                                 <span className="text-sm font-medium">Quality Assurance</span>
                             </div>
                         </motion.div>
@@ -120,7 +120,7 @@ export default function HeroSection() {
                         >
                             <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl w-64 transform rotate-6 hover:rotate-0 transition-all duration-500 group cursor-pointer hover:bg-white/20">
                                 <div className="flex items-center justify-between mb-4">
-                                    <div className="w-12 h-12 rounded-full bg-linear-to-br from-accent-red to-accent-orange flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">55+</div>
+                                    <div className="w-12 h-12 rounded-full bg-linear-to-br from-accent-navy to-accent-royal flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">55+</div>
                                     <div className="text-xs text-white/50 bg-black/20 px-2 py-1 rounded-full">Since 1968</div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-1">Market Leaders</h3>
@@ -136,17 +136,17 @@ export default function HeroSection() {
                         >
                             <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-xl border border-white/10 shadow-2xl w-80 transform -rotate-3 hover:rotate-0 transition-all duration-500 group cursor-pointer">
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="p-3 rounded-full bg-accent-orange/20 text-accent-orange group-hover:bg-accent-orange group-hover:text-white transition-colors">
+                                    <div className="p-3 rounded-full bg-accent-royal/20 text-accent-royal group-hover:bg-accent-royal group-hover:text-white transition-colors">
                                         <Play className="w-6 h-6 fill-current" />
                                     </div>
                                     <div>
-                                        <div className="text-xs text-accent-orange uppercase tracking-wider font-semibold">Watch Now</div>
+                                        <div className="text-xs text-accent-royal uppercase tracking-wider font-semibold">Watch Now</div>
                                         <div className="text-white font-bold text-lg">Manufacturing Process</div>
                                     </div>
                                 </div>
                                 <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
                                     <motion.div
-                                        className="h-full bg-gradient-to-r from-accent-red to-accent-orange"
+                                        className="h-full bg-gradient-to-r from-accent-navy to-accent-royal"
                                         initial={{ width: "0%" }}
                                         animate={{ width: "60%" }}
                                         transition={{ duration: 2, delay: 1.5 }}

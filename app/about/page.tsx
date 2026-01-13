@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/Button';
-import { Package, Target, Gem, Handshake, Leaf, ArrowRight, Award } from 'lucide-react';
+import { Package, Target, Gem, Handshake, Leaf, ArrowRight, Award, ShieldCheck } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -12,7 +12,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-bg.png"
+            src="/images/hero-bg-blue.png"
             alt="Factory Background"
             fill
             className="object-cover"
@@ -28,11 +28,11 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
-              <span className="flex h-2 w-2 rounded-full bg-accent-orange animate-pulse"></span>
-              <span className="text-sm font-medium tracking-wide">Since 1968</span>
+              <span className="flex h-2 w-2 rounded-full bg-accent-royal animate-pulse"></span>
+              <span className="text-sm font-medium tracking-wide">Since 2008</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-              Pioneering <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-red to-accent-orange">Excellence</span>
+              Pioneering <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">Excellence</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Max Extrusions Pvt. Ltd. has been at the forefront of India&apos;s plastic packaging industry, delivering quality products and trusted service for over five decades.
@@ -43,7 +43,7 @@ export default function AboutPage() {
 
       {/* Legacy & Leadership Section */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-orange/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-royal/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -53,12 +53,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold text-charcoal mb-6">Our Legacy & Leadership</h2>
+              <h2 className="text-4xl font-bold text-charcoal mb-6">Our Legacy & <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-navy to-accent-royal">Leadership</span></h2>
               <div className="prose prose-lg text-gray-600 space-y-6">
                 <p>
                   Reviewing our history, Max Extrusions Pvt. Ltd. was established with a small extrusion unit in Daman. Through decades of relentless dedication to quality and innovation, we have evolved into one of the region&apos;s most trusted manufacturing hubs.
                 </p>
-                <div className="border-l-4 border-accent-red pl-6 py-2 bg-gray-50 rounded-r-xl">
+                <div className="border-l-4 border-accent-navy pl-6 py-2 bg-gray-50 rounded-r-xl">
                   <p className="font-medium text-charcoal italic text-xl leading-relaxed">
                     &quot;Our company is growing in leaps and bounds under the headship of Mr. Deepak Mistry.&quot;
                   </p>
@@ -70,11 +70,11 @@ export default function AboutPage() {
 
               <div className="mt-10 grid grid-cols-2 gap-6">
                 <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-accent-red mb-1">55+</div>
+                  <div className="text-3xl font-bold text-accent-navy mb-1">17+</div>
                   <div className="text-sm text-gray-600">Years of Experience</div>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-accent-red mb-1">500+</div>
+                  <div className="text-3xl font-bold text-accent-navy mb-1">300+</div>
                   <div className="text-sm text-gray-600">Happy Clients</div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                     <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                     <div className="absolute bottom-10 left-10 z-20">
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 bg-accent-orange rounded-lg">
+                        <div className="p-2 bg-accent-royal rounded-lg">
                           <Award className="w-6 h-6 text-white" />
                         </div>
                         <span className="text-white font-bold tracking-wide uppercase text-sm">Visionary Leadership</span>
@@ -123,10 +123,11 @@ export default function AboutPage() {
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">The principles that guide every decision we make and every product we manufacture.</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {[
               { icon: Target, title: "Integrity", desc: "Honest and transparent in all our dealings." },
               { icon: Gem, title: "Excellence", desc: "Striving for the highest standards in everything." },
+              { icon: ShieldCheck, title: "Quality", desc: "Uncompromising commitment to superior products." },
               { icon: Handshake, title: "Partnership", desc: "Building lasting relationships with clients." },
               { icon: Leaf, title: "Sustainability", desc: "Responsible manufacturing for a better future." }
             ].map((item, i) => (
@@ -138,7 +139,7 @@ export default function AboutPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-accent-red to-accent-orange rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-gradient-to-br from-accent-navy to-accent-royal rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -153,12 +154,12 @@ export default function AboutPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-charcoal mb-6">Ready to Partner with Us?</h2>
-          <p className="text-xl text-gray-500 mb-10">Experience the quality difference that 55+ years of expertise brings.</p>
+          <p className="text-xl text-gray-500 mb-10">Experience the quality difference that 17+ years of expertise brings.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/contact" variant="primary" icon={<ArrowRight className="w-4 h-4" />}>
               Contact Us
             </Button>
-            <Button href="/products" variant="outline" icon={<Package className="w-4 h-4" />}>
+            <Button href="/products" variant="ghost" icon={<Package className="w-4 h-4" />}>
               View Products
             </Button>
           </div>

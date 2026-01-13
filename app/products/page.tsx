@@ -16,7 +16,7 @@ export default function ProductsPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-bg.png"
+            src="/images/hero-bg-blue.png"
             alt="Products Background"
             fill
             className="object-cover"
@@ -32,11 +32,11 @@ export default function ProductsPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
-              <Package className="w-4 h-4 text-accent-orange" />
+              <Package className="w-4 h-4 text-accent-royal" />
               <span className="text-sm font-medium tracking-wide">Comprehensive Catalog</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-              Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-red to-accent-orange">Packaging Solutions</span>
+              Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">Packaging Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               From standard carry bags to specialized industrial films, excellence is engineered into every product we manufacture.
@@ -58,7 +58,7 @@ export default function ProductsPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
-                className="px-6 py-2 rounded-full bg-gray-100 text-charcoal font-medium text-sm hover:bg-accent-red hover:text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
+                className="px-6 py-2 rounded-full bg-gray-100 text-charcoal font-medium text-sm hover:bg-accent-navy hover:text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
               >
                 {category}
               </motion.button>
@@ -91,8 +91,8 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-[2.5rem] overflow-hidden bg-charcoal shadow-2xl p-12 md:p-24 text-center">
             <div className="absolute inset-0">
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-orange/10 rounded-full blur-[80px] mix-blend-screen"></div>
-              <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-red/10 rounded-full blur-[80px] mix-blend-screen"></div>
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-royal/10 rounded-full blur-[80px] mix-blend-screen"></div>
+              <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-navy/10 rounded-full blur-[80px] mix-blend-screen"></div>
               <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.05]"></div>
             </div>
 

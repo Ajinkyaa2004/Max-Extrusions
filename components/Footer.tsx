@@ -5,11 +5,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-charcoal text-white relative overflow-hidden border-t border-white/5">
+    <footer className="bg-gray-800 text-white relative overflow-hidden border-t border-white/5">
       {/* Abstract Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-red/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-orange/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-navy/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-royal/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03]"></div>
       </div>
 
@@ -18,13 +18,13 @@ export default function Footer() {
           {/* Company Brand */}
           <div className="lg:col-span-4">
             <Link href="/" className="inline-flex items-center gap-2 mb-6 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent-red to-accent-orange rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent-red/50 transition-all duration-300">
+              <div className="w-10 h-10 bg-gradient-to-br from-accent-navy to-accent-royal rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent-navy/50 transition-all duration-300">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
               </div>
               <div className="text-2xl font-bold tracking-tight">
-                MAX<span className="text-accent-red">EXTRUSIONS</span>
+                MAX<span className="text-accent-royal">EXTRUSIONS</span>
               </div>
             </Link>
             <p className="text-gray-400 leading-relaxed mb-8">
@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-accent-red flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-accent-navy flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
                   <Icon className="w-5 h-5 text-gray-300 hover:text-white" />
                 </a>
               ))}
@@ -48,8 +48,8 @@ export default function Footer() {
             <ul className="space-y-4">
               {['Home', 'About Us', 'Products', 'Infrastructure', 'Clients'].map((item) => (
                 <li key={item}>
-                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-accent-orange transition-colors flex items-center gap-2 group">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-accent-orange transition-colors"></span>
+                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-accent-royal transition-colors flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-accent-royal transition-colors"></span>
                     {item === 'Home' ? 'Home' : item}
                   </Link>
                 </li>
@@ -61,10 +61,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-lg font-semibold mb-6 text-white">Products</h4>
             <ul className="space-y-4">
-              {['Plastic Bags', 'Garbage Bags', 'Plastic Films', 'Stretch Wrap'].map((item) => (
+              {['Plastic Bags', 'Garbage Bags', 'Plastic Films', 'Stretch Wrap', '& More'].map((item) => (
                 <li key={item}>
-                  <Link href="/products" className="text-gray-400 hover:text-accent-orange transition-colors flex items-center gap-2 group">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-accent-orange transition-colors"></span>
+                  <Link href="/products" className="text-gray-400 hover:text-accent-royal transition-colors flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-accent-royal transition-colors"></span>
                     {item}
                   </Link>
                 </li>
@@ -77,18 +77,18 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6 text-white">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-4 text-gray-400">
-                <MapPin className="w-5 h-5 text-accent-red mt-1 shrink-0" />
+                <MapPin className="w-5 h-5 text-accent-royal mt-1 shrink-0" />
                 <span className="text-sm leading-relaxed">
                   Survey No.688/13 Siddhivinayak Industrial Estate, Somnath Daman, India - 396210
                 </span>
               </li>
               <li className="flex items-center gap-4 text-gray-400">
-                <Phone className="w-5 h-5 text-accent-red shrink-0" />
-                <span>+91-260-2244707</span>
+                <Phone className="w-5 h-5 text-accent-royal shrink-0" />
+                <span>+91-6359313912</span>
               </li>
               <li className="flex items-center gap-4 text-gray-400">
-                <Mail className="w-5 h-5 text-accent-red shrink-0" />
-                <span>info@maxextrusions.com</span>
+                <Mail className="w-5 h-5 text-accent-royal shrink-0" />
+                <span>maxextpvtltd@gmail.com</span>
               </li>
             </ul>
           </div>
