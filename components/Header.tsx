@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
@@ -8,6 +9,7 @@ import { Menu, X, ChevronRight } from 'lucide-react';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,18 +56,29 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 group ${scrolled ? 'text-gray-700 hover:text-accent-navy' : 'text-white/90 hover:text-white'
-                  }`}
-              >
-                {item.name}
-                <span className={`absolute inset-0 rounded-full scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 -z-10 ${scrolled ? 'bg-gray-100' : 'bg-white/10 backdrop-blur-sm'
-                  }`}></span>
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 group ${isActive
+                      ? scrolled
+                        ? 'text-accent-navy bg-accent-navy/10'
+                        : 'text-white bg-white/20 backdrop-blur-md'
+                      : scrolled
+                        ? 'text-gray-700 hover:text-accent-navy'
+                        : 'text-white/90 hover:text-white'
+                    }`}
+                >
+                  {item.name}
+                  {!isActive && (
+                    <span className={`absolute inset-0 rounded-full scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 -z-10 ${scrolled ? 'bg-gray-100' : 'bg-white/10 backdrop-blur-sm'
+                      }`}></span>
+                  )}
+                </Link>
+              );
+            })}
             <div className="pl-4 ml-4 border-l border-gray-200/20">
               <Link
                 href="/contact"
@@ -101,23 +114,30 @@ export default function Header() {
             className="fixed inset-0 top-0 z-40 bg-white/95 backdrop-blur-xl md:hidden flex flex-col pt-24 px-6"
           >
             <div className="flex flex-col space-y-2">
-              {navItems.map((item, index) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Link
-                    href={item.href}
-                    className="flex items-center justify-between p-4 text-lg font-medium text-charcoal hover:bg-gray-50 rounded-xl group"
-                    onClick={() => setMobileMenuOpen(false)}
+              {navItems.map((item, index) => {
+                const isActive = pathname === item.href;
+                return (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
                   >
-                    {item.name}
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-accent-navy transition-colors" />
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={item.href}
+                      className={`flex items-center justify-between p-4 text-lg font-medium rounded-xl group transition-all duration-300 ${isActive
+                          ? 'bg-accent-navy/10 text-accent-navy'
+                          : 'text-charcoal hover:bg-gray-50'
+                        }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                      <ChevronRight className={`w-5 h-5 transition-colors ${isActive ? 'text-accent-navy' : 'text-gray-400 group-hover:text-accent-navy'
+                        }`} />
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
 
             <motion.div
