@@ -36,7 +36,7 @@ export default function InfrastructurePage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">Manufacturing Hub</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Our state-of-the-art facility is equipped with advanced extrusion machinery, capable of delivering 1000 TPA production capacity.
+              Our state-of-the-art facility is equipped with advanced extrusion machinery, capable of delivering 1800 TPA production capacity.
             </p>
           </motion.div>
         </div>
