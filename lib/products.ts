@@ -4,7 +4,7 @@ export interface Product {
   slug: string;
   description: string;
   image: string;
-  category: string;
+  categories: string[];
   specifications?: string[];
   features?: string[];
 }
@@ -16,7 +16,7 @@ export const products: Product[] = [
     slug: 'plastic-carry-bags',
     description: 'Durable and versatile carry bags suitable for retail, grocery, and various commercial applications.',
     image: '/images/products/carry-bags.png',
-    category: 'Bags',
+    categories: ['Bags'],
     features: ['Customizable sizes', 'High strength', 'Cost-effective', 'Recyclable options'],
   },
   {
@@ -25,7 +25,7 @@ export const products: Product[] = [
     slug: 'garbage-bags',
     description: 'Heavy-duty garbage bags designed for residential, commercial, and industrial waste management.',
     image: '/images/products/garbage-bags.png',
-    category: 'Bags',
+    categories: ['Bags', 'Eco-Friendly'],
     features: ['Leak-proof', 'Tear-resistant', 'Various capacities', 'Eco-friendly variants'],
   },
   {
@@ -34,7 +34,7 @@ export const products: Product[] = [
     slug: 'courier-bags',
     description: 'Secure and tamper-evident bags ideal for e-commerce, logistics, and postal services.',
     image: '/images/products/courier-bags.png',
-    category: 'Bags',
+    categories: ['Bags'],
     features: ['Tamper-proof seal', 'Water-resistant', 'Lightweight', 'Custom printing available'],
   },
   {
@@ -43,7 +43,7 @@ export const products: Product[] = [
     slug: 'ice-bags',
     description: 'Food-grade ice packaging bags designed for safe storage and transportation of ice.',
     image: '/images/products/ice-bags.png',
-    category: 'Bags',
+    categories: ['Bags'],
     features: ['Food-grade material', 'Strong sealing', 'Transparent', 'Various sizes'],
   },
   {
@@ -52,7 +52,7 @@ export const products: Product[] = [
     slug: 'plastic-films',
     description: 'Versatile plastic films for packaging, lamination, and protective applications.',
     image: '/images/products/plastic-films.png',
-    category: 'Films',
+    categories: ['Films'],
     features: ['High clarity', 'Excellent barrier properties', 'Customizable thickness', 'Multiple grades'],
   },
   {
@@ -61,7 +61,7 @@ export const products: Product[] = [
     slug: 'stretch-wrap',
     description: 'High-performance stretch film for pallet wrapping and securing goods during transportation.',
     image: '/images/products/stretch-wrap.png',
-    category: 'Films',
+    categories: ['Films'],
     features: ['Superior load stability', 'Puncture-resistant', 'High stretch ratio', 'Cost-effective'],
   },
   {
@@ -70,7 +70,7 @@ export const products: Product[] = [
     slug: 'pvc-shrink',
     description: 'Premium PVC shrink film for product bundling, packaging, and display applications.',
     image: '/images/products/pvc-shrink.png',
-    category: 'Films',
+    categories: ['Films'],
     features: ['Excellent clarity', 'Uniform shrinkage', 'Strong sealing', 'FDA compliant'],
   },
   {
@@ -79,7 +79,7 @@ export const products: Product[] = [
     slug: 'mulching-film',
     description: 'Agricultural mulching films that enhance crop yield and protect soil.',
     image: '/images/products/mulching-film.png',
-    category: 'Agricultural',
+    categories: ['Films', 'Agricultural'],
     features: ['UV stabilized', 'Weed control', 'Moisture retention', 'Temperature regulation'],
   },
   {
@@ -88,7 +88,7 @@ export const products: Product[] = [
     slug: 'lamination-film',
     description: 'High-quality lamination films for flexible packaging and printing applications.',
     image: '/images/products/lamination-film.png',
-    category: 'Films',
+    categories: ['Films'],
     features: ['Excellent adhesion', 'Heat-sealable', 'Printable surface', 'Moisture barrier'],
   },
   {
@@ -97,7 +97,7 @@ export const products: Product[] = [
     slug: 'transparent-sheets',
     description: 'Clear plastic sheets suitable for glazing, signage, and protective applications.',
     image: '/images/products/transparent-sheets.png',
-    category: 'Sheets',
+    categories: ['Specialty'],
     features: ['High transparency', 'Impact-resistant', 'Weather-proof', 'Easy to fabricate'],
   },
   {
@@ -106,7 +106,7 @@ export const products: Product[] = [
     slug: 'breathable-films',
     description: 'Specialized breathable films for hygiene and medical applications.',
     image: '/images/products/breathable-films-new.png',
-    category: 'Specialty',
+    categories: ['Films'],
     features: ['Microporous technology', 'Soft feel', 'Liquid barrier', 'Air permeable'],
   },
   {
@@ -115,7 +115,7 @@ export const products: Product[] = [
     slug: 'pharmaceutical-packaging',
     description: 'Medical-grade packaging materials meeting stringent pharmaceutical standards.',
     image: '/images/products/pharmaceutical-packaging-new.png',
-    category: 'Specialty',
+    categories: ['Specialty'],
     features: ['GMP certified', 'Moisture barrier', 'Tamper-evident', 'Child-resistant options'],
   },
   {
@@ -124,7 +124,7 @@ export const products: Product[] = [
     slug: 'oxo-biodegradable',
     description: 'Environmentally responsible packaging solutions that degrade naturally over time.',
     image: '/images/products/oxo-biodegradable-new.png',
-    category: 'Eco-Friendly',
+    categories: ['Bags', 'Eco-Friendly'],
     features: ['Eco-friendly', 'Controlled degradation', 'Same strength as conventional', 'Certified materials'],
   },
   {
@@ -133,7 +133,7 @@ export const products: Product[] = [
     slug: 'compostable-bags',
     description: '100% compostable bags made from plant-based materials that break down naturally without harmful residues.',
     image: '/images/products/compostable-bags-new.png',
-    category: 'Eco-Friendly',
+    categories: ['Bags', 'Eco-Friendly'],
     features: ['100% compostable', 'Plant-based materials', 'Certified biodegradable', 'Zero microplastics'],
   },
   {
@@ -142,7 +142,7 @@ export const products: Product[] = [
     slug: 'nursery-bags',
     description: 'Specialized grow bags for nurseries and agriculture, designed for optimal plant growth.',
     image: '/images/products/nursery-bags-new.png',
-    category: 'Agricultural',
+    categories: ['Bags', 'Agricultural'],
     features: ['UV stabilized', 'Drainage holes', 'Various sizes', 'Durable construction'],
   },
   {
@@ -151,7 +151,7 @@ export const products: Product[] = [
     slug: 'blue-release-film',
     description: 'High-quality blue release film designed for composite manufacturing and industrial applications.',
     image: '/images/products/blue-release-film-new.png',
-    category: 'Films',
+    categories: ['Films', 'Specialty'],
     features: ['Non-perforated surface', 'Easy release', 'Heat-resistant', 'Reusable'],
   },
   {
@@ -160,7 +160,7 @@ export const products: Product[] = [
     slug: 'conducting-sheets',
     description: 'Anti-static conductive plastic sheets ideal for electronics packaging and ESD-sensitive environments.',
     image: '/images/products/transparent-sheets.png',
-    category: 'Specialty',
+    categories: ['Films', 'Specialty'],
     features: ['Anti-static properties', 'ESD protection', 'Surface resistivity controlled', 'Electronics-grade'],
   },
   {
@@ -169,7 +169,7 @@ export const products: Product[] = [
     slug: 'frosted-films',
     description: 'Premium frosted finish films providing privacy and an elegant look for packaging.',
     image: '/images/products/Frostedbag.png',
-    category: 'Films',
+    categories: ['Films'],
     features: ['Matte finish', 'Soft touch', 'High durability', 'Premium look'],
   },
   {
@@ -178,7 +178,7 @@ export const products: Product[] = [
     slug: 'zippers-sliders',
     description: 'High-quality plastic zippers and sliders for reclosable packaging solutions.',
     image: '/images/products/zipper.png',
-    category: 'Specialty',
+    categories: ['Specialty'],
     features: ['Smooth operation', 'Durable seal', 'Various sizes', 'Custom colors'],
   },
 ];
@@ -188,5 +188,5 @@ export function getProductBySlug(slug: string): Product | undefined {
 }
 
 export function getProductsByCategory(category: string): Product[] {
-  return products.filter((product) => product.category === category);
+  return products.filter((product) => product.categories.includes(category));
 }

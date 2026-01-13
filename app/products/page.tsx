@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import ProductCard from '@/components/ProductCard';
@@ -8,7 +9,13 @@ import { products } from '@/lib/products';
 import { Package, Filter, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function ProductsPage() {
-  const categories = Array.from(new Set(products.map(p => p.category)));
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const categories = ['All', 'Bags', 'Films', 'Agricultural', 'Specialty', 'Eco-Friendly'];
+
+  const filteredProducts = selectedCategory === 'All'
+    ? products
+    : products.filter(product => product.categories.includes(selectedCategory));
 
   return (
     <div className="min-h-screen bg-white">
@@ -58,7 +65,11 @@ export default function ProductsPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
-                className="px-6 py-2 rounded-full bg-gray-100 text-charcoal font-medium text-sm hover:bg-accent-navy hover:text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap ${selectedCategory === category
+                  ? 'bg-accent-navy text-white shadow-md'
+                  : 'bg-gray-100 text-charcoal hover:bg-gray-200'
+                  }`}
               >
                 {category}
               </motion.button>
@@ -71,7 +82,7 @@ export default function ProductsPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product, index) => (
+            {filteredProducts.map((product, index) => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, y: 30 }}
