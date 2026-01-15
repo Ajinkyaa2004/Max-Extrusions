@@ -32,8 +32,8 @@ export default function InfrastructurePage() {
               <span className="text-sm font-medium tracking-wide">Daman, India</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-              World-Class <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">Manufacturing Hub</span>
+              Center of  <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">manufacturing excellence</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Our state-of-the-art facility is equipped with advanced extrusion machinery, capable of delivering 1800 TPA production capacity.
