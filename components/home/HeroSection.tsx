@@ -39,7 +39,7 @@ export default function HeroSection() {
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6"
                         >
                             <span className="flex h-2 w-2 rounded-full bg-accent-royal animate-pulse"></span>
-                            <span className="text-sm font-medium text-white/90 tracking-wide">Established 2008</span>
+                            <span className="text-sm font-medium text-white/90 tracking-wide">Established 2007</span>
                         </motion.div>
 
                         <motion.h1
@@ -121,7 +121,7 @@ export default function HeroSection() {
                             <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl w-64 transform rotate-6 hover:rotate-0 transition-all duration-500 group cursor-pointer hover:bg-white/20">
                                 <div className="flex items-center justify-between mb-4">
                                     <div className="w-12 h-12 rounded-full bg-linear-to-br from-accent-navy to-accent-royal flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">55+</div>
-                                    <div className="text-xs text-white/50 bg-black/20 px-2 py-1 rounded-full">Since 1968</div>
+                                    <div className="text-xs text-white/50 bg-black/20 px-2 py-1 rounded-full">Since 2007</div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-1">Market Leaders</h3>
                                 <p className="text-sm text-gray-300">Consistently delivering quality across India.</p>

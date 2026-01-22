@@ -148,15 +148,17 @@ export default function ClientsClient() {
                                 <div key={i} className="flex items-center gap-16">
                                     {[
                                         "Godrej Interio",
-                                        "Nelson Global Products",
-                                        "Prince Plastics",
-                                        "Hamilton Housewares",
                                         "Cello World",
-                                        "Nilkamal Ltd",
                                         "Vactech Composite Pvt Ltd",
                                         "Jivraj Tea Pvt Ltd",
                                         "Allure Gift Wraps Pvt Ltd",
-                                        "Zetts Cosmetics Pvt Ltd"
+                                        "Zetts Cosmetics Pvt Ltd",
+                                        "Dzire surgical india pvt ltd",
+                                        "Jaquar and company pvt ltd",
+                                        "Aqsa polypack pvt ltd",
+                                        "Pacnids pvt ltd",
+                                        "Ambay medical devices",
+                                        "Pacific laminates"
                                     ].map((client, index) => (
                                         <div key={index} className="flex items-center gap-12">
                                             <span className="text-3xl md:text-3xl font-bold whitespace-nowrap hover:text-accent-navy transition-colors cursor-default">

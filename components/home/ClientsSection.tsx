@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Building2, Users, MapPin } from 'lucide-react';
 
 const clients = [
-    "Nelson Global (India) Pvt. Ltd",
+    "Jaquar and company pvt ltd",
     "Godrej Tysons",
     "Vactech Composite Pvt. Ltd",
     "Jivraj T Pvt. Ltd",
@@ -35,7 +35,7 @@ export default function StatsSection() {
                             A Legacy of <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-navy to-accent-royal">Excellence</span>
                         </h2>
                         <p className="text-gray-600 leading-relaxed mb-6">
-                            Established in 1968, Max Extrusions Pvt. Ltd. has set new standards in client satisfaction. Based in Daman, we have divided our manufacturing facility into various areas for smooth production flow, equipped with state-of-the-art machinery.
+                            Established in 2007, Max Extrusions Pvt. Ltd. has set new standards in client satisfaction. Based in Daman, we have divided our manufacturing facility into various areas for smooth production flow, equipped with state-of-the-art machinery.
                         </p>
                         <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
                             <MapPin className="w-5 h-5 text-accent-navy mt-1 shrink-0" />

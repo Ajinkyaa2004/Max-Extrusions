@@ -28,15 +28,36 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Setting new standards in plastic packaging since 1968. Manufacturer of high-quality plastic bags, films, and custom packaging solutions based in Daman, India.
+              Setting new standards in plastic packaging since 2007. Manufacturer of high-quality plastic bags, films, and custom packaging solutions based in Daman, India.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mb-6">
               {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-accent-navy flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
                   <Icon className="w-5 h-5 text-gray-300 hover:text-white" />
                 </a>
               ))}
             </div>
+
+            {/* ISO Certification Badge */}
+            <a
+              href="/ISO CERT.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 hover:border-accent-royal/50 transition-all group w-fit"
+            >
+              <div className="w-8 h-8 relative">
+                <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-accent-royal" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-[8px] font-bold text-white">ISO</span>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs font-bold text-white tracking-wider group-hover:text-accent-royal transition-colors">ISO 9001:2015</span>
+                <span className="text-[10px] text-gray-400">Certified Company</span>
+              </div>
+            </a>
           </div>
 
           {/* Spacer */}

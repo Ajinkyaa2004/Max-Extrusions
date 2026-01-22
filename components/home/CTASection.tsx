@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
-import { ArrowRight, FileText, PhoneCall } from 'lucide-react';
+import { ArrowRight, FileText, PhoneCall, ShieldCheck, Star, Trophy, Sparkles } from 'lucide-react';
 
 export default function CTASection() {
     return (
@@ -171,8 +171,10 @@ export default function CTASection() {
                                     </div>
                                     <p className="text-white/90 text-sm mb-5 leading-snug">Guaranteed Satisfaction on all bulk orders.</p>
                                     <div className="flex -space-x-2">
-                                        {[1, 2, 3, 4].map(i => (
-                                            <div key={i} className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20" />
+                                        {[ShieldCheck, Star, Trophy, Sparkles].map((Icon, i) => (
+                                            <div key={i} className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20 flex items-center justify-center">
+                                                <Icon className="w-4 h-4 text-white" />
+                                            </div>
                                         ))}
                                     </div>
                                 </div>

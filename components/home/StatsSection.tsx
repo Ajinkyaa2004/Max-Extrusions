@@ -24,7 +24,7 @@ const stats = [
     {
         id: 3,
         label: "Production Capacity",
-        value: "1800",
+        value: "2400",
         suffix: " TPA",
         icon: TrendingUp,
         description: "State-of-the-art manufacturing facility"

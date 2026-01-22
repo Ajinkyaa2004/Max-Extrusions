@@ -36,7 +36,7 @@ export default function InfrastructureClient() {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">manufacturing excellence</span>
                         </h1>
                         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                            Our state-of-the-art facility is equipped with advanced extrusion machinery, capable of delivering 1800 TPA production capacity.
+                            Our state-of-the-art facility is equipped with advanced extrusion machinery, capable of delivering 2400 TPA production capacity.
                         </p>
                     </motion.div>
                 </div>
@@ -50,7 +50,7 @@ export default function InfrastructureClient() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid md:grid-cols-4 gap-8">
                         {[
-                            { icon: Building2, value: "1800", label: "TPA Capacity", suffix: "+" },
+                            { icon: Building2, value: "2400", label: "TPA Capacity", suffix: "+" },
                             { icon: Settings, value: "50", label: "Product Variants", suffix: "+" },
                             { icon: Globe, value: "24/7", label: "Production Cycle", suffix: "" },
                             { icon: CheckCircle, value: "100%", label: "Quality Tested", suffix: "" },
