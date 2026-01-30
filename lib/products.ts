@@ -169,7 +169,7 @@ export const products: Product[] = [
     slug: 'frosted-films',
     description: 'Premium frosted finish films that provide a sophisticated look and added privacy for packaging. features a soft-touch matte surface that is highly durable and resistant to fingerprints. enhances the perceived value of products, making it perfect for luxury and retail branding.',
     image: '/images/products/Frostedbag.png',
-    categories: ['Films'],
+    categories: ['Films', 'Bags', 'Specialty'],
     features: ['Matte finish', 'Soft touch', 'High durability', 'Premium look'],
   },
   {
@@ -178,7 +178,7 @@ export const products: Product[] = [
     slug: 'zippers-sliders',
     description: 'High-quality plastic zipper bags offering reliable reclosable solutions for various packaging needs. designed with smooth-operating zippers that provide a durable and airtight seal every time. available in multiple sizes and custom colors to suit different product requirements.',
     image: '/images/products/zipper.png',
-    categories: ['Specialty'],
+    categories: ['Bags', 'Specialty'],
     features: ['Smooth operation', 'Durable seal', 'Various sizes', 'Custom colors'],
   },
   {
@@ -187,7 +187,7 @@ export const products: Product[] = [
     slug: 'slider-bags',
     description: 'Convenient plastic slider bags designed for easy-to-use reclosable packaging applications. features a smooth sliding mechanism that ensures a secure seal to keep contents fresh. versatile and durable, making them ideal for storing food, travel items, and organization.',
     image: '/images/products/Slider bag.jpeg',
-    categories: ['Specialty'],
+    categories: ['Bags', 'Specialty'],
     features: ['Smooth operation', 'Durable seal', 'Various sizes', 'Custom colors'],
   },
   {
@@ -222,7 +222,7 @@ export const products: Product[] = [
     name: 'Poly-oly Shrink Film',
     slug: 'poly-oly-shrink-film',
     description: 'Versatile polyolefin shrink film known for its high clarity, strength, and soft touch. perfect for packaging regular and irregularly shaped items with a tight, professional finish. eco-friendly and food-safe, making it suitable for a wide range of consumer products.',
-    image: '/images/products/poly-oly-shrink-film.png',
+    image: '/images/products/poly-oly-shrink-film-gen.png',
     categories: ['Films'],
     features: ['Soft touch', 'High clarity', 'Food safe', 'Versatile application'],
   },
@@ -268,7 +268,7 @@ export const products: Product[] = [
     slug: 'laminated-woven-bags',
     description: 'Sturdy laminated woven bags offering superior strength and water resistance for heavy loads. combines the durability of woven fabric with a smooth, printable surface for high-quality branding. ideal for packaging bulk items like grains, fertilizers, and animal feed.',
     image: '/images/products/laminated-woven-bags-gen.png',
-    categories: ['Bags', 'Specialty'],
+    categories: ['Bags', 'Agricultural', 'Specialty'],
     features: ['Water resistant', 'High strength', 'Printable surface', 'Bulk storage'],
   },
   {
@@ -277,7 +277,7 @@ export const products: Product[] = [
     slug: 'non-laminated-woven-bags',
     description: 'Breathable non-laminated woven bags designed for packaging agricultural and industrial bulk products. provides excellent durability and tear resistance while allowing air circulation to prevent spoilage. cost-effective and reliable solution for transporting heavy materials.',
     image: '/images/products/non-laminated-woven-bags-gen.png',
-    categories: ['Bags', 'Specialty'],
+    categories: ['Bags', 'Agricultural', 'Specialty'],
     features: ['Breathable', 'Tear resistant', 'Cost-effective', 'Heavy load capacity'],
   },
   {
