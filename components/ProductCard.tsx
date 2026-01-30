@@ -34,7 +34,7 @@ export default function ProductCard({ name, description, image, slug }: ProductC
         <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-accent-navy transition-colors">
           {name}
         </h3>
-        <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+        <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
           {description}
         </p>
 
@@ -45,7 +45,7 @@ export default function ProductCard({ name, description, image, slug }: ProductC
           className="w-full justify-center"
           icon={<ArrowRight className="w-4 h-4" />}
         >
-          View Details
+          Request Quote
         </Button>
       </div>
     </div>
