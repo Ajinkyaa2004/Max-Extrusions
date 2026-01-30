@@ -276,7 +276,7 @@ export const products: Product[] = [
     name: 'Non Laminated Woven Bags',
     slug: 'non-laminated-woven-bags',
     description: 'Breathable non-laminated woven bags designed for packaging agricultural and industrial bulk products. provides excellent durability and tear resistance while allowing air circulation to prevent spoilage. cost-effective and reliable solution for transporting heavy materials.',
-    image: '/images/products/garbage-bags.png',
+    image: '/images/products/non-laminated-woven-bags-gen.png',
     categories: ['Bags', 'Specialty'],
     features: ['Breathable', 'Tear resistant', 'Cost-effective', 'Heavy load capacity'],
   },
