@@ -67,11 +67,18 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-4">
-              {['Home', 'About Us', 'Products', 'Infrastructure', 'Clients'].map((item) => (
-                <li key={item}>
-                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-accent-royal transition-colors flex items-center gap-2 group">
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'About Us', href: '/about' },
+                { name: 'Products', href: '/products' },
+                { name: 'Infrastructure', href: '/infrastructure' },
+                { name: 'Clients', href: '/clients' },
+                { name: 'Contact Us', href: '/contact' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-gray-400 hover:text-accent-royal transition-colors flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-accent-royal transition-colors"></span>
-                    {item === 'Home' ? 'Home' : item}
+                    {item.name}
                   </Link>
                 </li>
               ))}

@@ -96,7 +96,7 @@ export const products: Product[] = [
     name: 'Transparent Plastic Sheets',
     slug: 'transparent-sheets',
     description: 'Crystal-clear plastic sheets suitable for glazing, signage, and various protective applications. highly impact-resistant and weather-proof, making them a durable alternative to glass. easy to fabricate and cut, providing flexibility for custom designs and projects.',
-    image: '/images/products/transparent-sheets-gen.png',
+    image: '/images/products/Transperent plastic sheet.jpeg',
     categories: ['Specialty'],
     features: ['High transparency', 'Impact-resistant', 'Weather-proof', 'Easy to fabricate'],
   },

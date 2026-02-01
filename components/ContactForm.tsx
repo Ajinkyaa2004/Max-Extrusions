@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, User, Mail, Phone, MessageSquare, FileText, CheckCircle2 } from 'lucide-react';
+import { useForm } from '@formspree/react';
+import { useEffect } from 'react';
 
 // --- Premium Reusable Input Components ---
 
@@ -124,6 +126,10 @@ const FloatingTextArea = ({ label, icon: Icon, className, value, ...props }: Flo
 
 
 export default function ContactForm() {
+    // TODO: Replace "YOUR_FORM_ID" with your actual Formspree Form ID (e.g., "moqjowpq")
+    // You can find this in your Formspree dashboard or project settings.
+    const [state, handleSubmit] = useForm("xkozjrea");
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -132,42 +138,14 @@ export default function ContactForm() {
         message: ''
     });
 
-    const [isLoading, setIsLoading] = useState(false);
-    const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsLoading(true);
-        setStatus('idle');
-
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                setStatus('success');
-                setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-                setTimeout(() => setStatus('idle'), 5000);
-            } else {
-                setStatus('error');
-                console.error('Error submitting form:', data.error);
-                setTimeout(() => setStatus('idle'), 5000);
-            }
-        } catch (error) {
-            setStatus('error');
-            console.error('Error submitting form:', error);
-            setTimeout(() => setStatus('idle'), 5000);
-        } finally {
-            setIsLoading(false);
+    // Clear form on success
+    useEffect(() => {
+        if (state.succeeded) {
+            setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
         }
-    };
+    }, [state.succeeded]);
+
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -228,11 +206,11 @@ export default function ContactForm() {
             <div className="pt-2">
                 <button
                     type="submit"
-                    disabled={isLoading}
+                    disabled={state.submitting}
                     className="w-full bg-gradient-to-r from-accent-navy to-accent-royal text-white font-bold py-4 rounded-xl shadow-lg shadow-accent-navy/20 hover:shadow-xl hover:shadow-accent-navy/30 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed group relative overflow-hidden"
                 >
                     <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-xl" />
-                    {isLoading ? (
+                    {state.submitting ? (
                         <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                     ) : (
                         <>
@@ -243,7 +221,7 @@ export default function ContactForm() {
                 </button>
             </div>
 
-            {status === 'success' && (
+            {state.succeeded && (
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -254,7 +232,7 @@ export default function ContactForm() {
                 </motion.div>
             )}
 
-            {status === 'error' && (
+            {state.errors && (
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}

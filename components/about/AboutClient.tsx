@@ -29,7 +29,7 @@ export default function AboutClient() {
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
                             <span className="flex h-2 w-2 rounded-full bg-accent-royal animate-pulse"></span>
-                            <span className="text-sm font-medium tracking-wide">Since 2008</span>
+                            <span className="text-sm font-medium tracking-wide">Since 2007</span>
                         </div>
                         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
                             Pioneering <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">Excellence</span>
