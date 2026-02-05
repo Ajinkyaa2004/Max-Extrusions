@@ -80,9 +80,10 @@ export default function CTASection() {
                                     Get Custom Quote
                                 </Button>
                                 <Button
-                                    href="/products"
+                                    href="/Max%20Extrusions%20Corporate%20Brochure.pptx%20(2).pdf"
                                     variant="outline"
                                     size="md"
+                                    target="_blank"
                                     icon={<FileText className="w-4 h-4" />}
                                 >
                                     Browse Catalog

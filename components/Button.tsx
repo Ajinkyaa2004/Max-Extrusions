@@ -9,6 +9,8 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   icon?: React.ReactNode; // Added icon prop for convenience
+  target?: '_blank' | '_self'; // For opening links in new tab
+  rel?: string; // For security when using target="_blank"
 }
 
 export default function Button({
@@ -18,7 +20,9 @@ export default function Button({
   size = 'md',
   className = '',
   onClick,
-  icon
+  icon,
+  target,
+  rel
 }: ButtonProps) {
   const baseStyles = 'relative inline-flex items-center justify-center font-bold rounded-full transition-all duration-300 overflow-hidden group';
 
@@ -75,6 +79,22 @@ export default function Button({
   );
 
   if (href) {
+    // Use regular anchor tag for external links or PDFs
+    if (target === '_blank' || href.startsWith('http') || href.endsWith('.pdf') || href.includes('.pptx')) {
+      return (
+        <a 
+          href={href} 
+          className={classes} 
+          target={target}
+          rel={rel || (target === '_blank' ? 'noopener noreferrer' : undefined)}
+        >
+          {sineElement}
+          {content}
+        </a>
+      );
+    }
+    
+    // Use Next.js Link for internal navigation
     return (
       <Link href={href} className={classes}>
         {sineElement}
