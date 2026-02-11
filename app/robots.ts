@@ -2,11 +2,23 @@ import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
     return {
-        rules: {
-            userAgent: '*',
-            allow: '/',
-            disallow: '/private/', // Example of disallowed route
-        },
+        rules: [
+            {
+                userAgent: '*',
+                allow: '/',
+                disallow: ['/api/', '/admin/', '/*.json$', '/*.xml$'],
+            },
+            {
+                userAgent: 'Googlebot',
+                allow: '/',
+                disallow: ['/api/', '/admin/'],
+            },
+            {
+                userAgent: 'Googlebot-Image',
+                allow: '/',
+            },
+        ],
         sitemap: 'https://maxextrusions.com/sitemap.xml',
+        host: 'https://maxextrusions.com',
     };
 }
