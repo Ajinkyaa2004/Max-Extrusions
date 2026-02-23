@@ -38,26 +38,50 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* ISO Certification Badge */}
-            <a
-              href="/ISO CERT.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 hover:border-accent-royal/50 transition-all group w-fit"
-            >
-              <div className="w-8 h-8 relative">
-                <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-accent-royal" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-[8px] font-bold text-white">ISO</span>
+            {/* Certification Badges */}
+            <div className="flex flex-col gap-3">
+              {/* ISO Certification Badge */}
+              <a
+                href="/ISO CERT.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 hover:border-accent-royal/50 transition-all group w-fit"
+              >
+                <div className="w-8 h-8 relative">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-accent-royal" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-[8px] font-bold text-white">ISO</span>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xs font-bold text-white tracking-wider group-hover:text-accent-royal transition-colors">ISO 9001:2015</span>
-                <span className="text-[10px] text-gray-400">Certified Company</span>
-              </div>
-            </a>
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold text-white tracking-wider group-hover:text-accent-royal transition-colors">ISO 9001:2015</span>
+                  <span className="text-[10px] text-gray-400">Certified Company</span>
+                </div>
+              </a>
+
+              {/* IEC Certificate Badge */}
+              <a
+                href="/IEC CERTIFICATE.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 hover:border-accent-royal/50 transition-all group w-fit"
+              >
+                <div className="w-8 h-8 relative">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-accent-royal" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-[8px] font-bold text-white">IEC</span>
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold text-white tracking-wider group-hover:text-accent-royal transition-colors">IEC Certificate</span>
+                  <span className="text-[10px] text-gray-400">Import-Export Code</span>
+                </div>
+              </a>
+            </div>
           </div>
 
           {/* Spacer */}
