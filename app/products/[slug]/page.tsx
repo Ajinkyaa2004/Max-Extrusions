@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             title: `${product.name} | Premium Plastic Packaging | Max Extrusions`,
             description: `${product.description} Available in custom specifications. ISO certified quality.`,
             url: url,
-            type: 'product',
+            type: 'website',
             images: [
                 {
                     url: product.image,
