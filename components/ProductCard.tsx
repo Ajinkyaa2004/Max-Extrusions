@@ -14,7 +14,7 @@ interface ProductCardProps {
 export default function ProductCard({ name, description, image, slug }: ProductCardProps) {
   return (
     <div className="group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 h-full flex flex-col hover:-translate-y-2">
-      <Link href={`/products/${slug}`} className="relative h-72 w-full overflow-hidden bg-gray-50 block cursor-pointer">
+      <Link href="/contact" className="relative h-72 w-full overflow-hidden bg-gray-50 block cursor-pointer">
         <Image
           src={image}
           alt={name}
@@ -32,7 +32,7 @@ export default function ProductCard({ name, description, image, slug }: ProductC
       </Link>
 
       <div className="p-6 flex flex-col flex-grow">
-        <Link href={`/products/${slug}`}>
+        <Link href="/contact">
           <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-accent-navy transition-colors cursor-pointer">
             {name}
           </h3>

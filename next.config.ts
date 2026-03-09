@@ -10,10 +10,6 @@ const nextConfig: NextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-  eslint: {
-    // Only run ESLint on these directories during production builds
-    dirs: ['app', 'components', 'lib'],
-  },
 };
 
 export default nextConfig;
