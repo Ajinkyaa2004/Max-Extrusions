@@ -4,12 +4,12 @@ import { products } from '@/lib/products';
 
 export const metadata: Metadata = {
   title: 'Premium Plastic Packaging Products | 50+ Variants | Max Extrusions',
-  description: 'Explore our comprehensive range of 50+ plastic packaging products including HDPE/LDPE Carry Bags, Garbage Bags, Stretch Wrap Films, Mulching Film, Pharmaceutical Packaging, and Custom Solutions. ISO 9001:2015 certified. Available in custom sizes, colors, and printing options.',
+  description: 'Explore our comprehensive range of 50+ plastic packaging products including HDPE/LDPE Carry Bags, Garbage Bags, Stretch Wrap Films, VCI Films, Pharmaceutical Packaging, and Custom Solutions. ISO 9001:2015 certified. Available in custom sizes, colors, and printing options.',
   keywords: [
     // Product categories
     'plastic carry bags', 'garbage bags', 'trash bags', 'stretch wrap film', 'stretch film',
     'courier bags', 'ice bags', 'D-cut bags', 'W-cut bags', 'U-cut bags',
-    'mulching film', 'agricultural film', 'pharma bags', 'hospital waste bags',
+    'VCI films', 'volatile corrosion inhibitor film', 'anti-corrosion packaging', 'pharma bags', 'hospital waste bags',
     'food packaging bags', 'grocery bags', 'shopping bags', 'retail bags',
     'HDPE bags', 'LDPE bags', 'LLDPE bags', 'biodegradable bags',
     // Product features

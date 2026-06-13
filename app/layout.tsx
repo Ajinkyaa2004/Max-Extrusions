@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     default: "Max Extrusions Pvt. Ltd. | Premium Plastic Packaging Manufacturer in India",
     template: "%s | Max Extrusions Pvt. Ltd."
   },
-  description: "ISO 9001:2015 certified plastic packaging manufacturer in Daman, India. Specializing in HDPE/LDPE carry bags, garbage bags, stretch wrap films, mulching film, and pharmaceutical packaging solutions since 2008. Custom manufacturing with 50+ product variants.",
+  description: "ISO 9001:2015 certified plastic packaging manufacturer in Daman, India. Specializing in HDPE/LDPE carry bags, garbage bags, stretch wrap films, VCI films, and pharmaceutical packaging solutions since 2008. Custom manufacturing with 50+ product variants.",
   keywords: [
     // Primary Keywords
     "plastic packaging manufacturer", "plastic bags manufacturer India", "HDPE bags manufacturer", "LDPE bags manufacturer",
     // Product Keywords
     "carry bags manufacturer", "garbage bags manufacturer", "trash bags", "stretch wrap film", "stretch film rolls",
-    "mulching film", "agricultural film", "pharmaceutical packaging", "hospital waste bags", "biohazard bags",
+    "VCI films", "volatile corrosion inhibitor film", "anti-corrosion packaging", "pharmaceutical packaging", "hospital waste bags", "biohazard bags",
     "grocery bags", "shopping bags", "D-cut bags", "W-cut bags", "U-cut bags",
     // Location Keywords
     "plastic manufacturer Daman", "packaging manufacturer Gujarat", "plastic extrusion India",

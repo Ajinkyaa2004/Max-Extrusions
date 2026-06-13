@@ -8,7 +8,7 @@ import { Users, Map, Star, BarChart, Handshake, ShoppingCart, Wheat, Pill, Packa
 export default function ClientsClient() {
     const industries = [
         { name: 'Retail & FMCG', icon: ShoppingCart, desc: 'Packaging for major retail chains.' },
-        { name: 'Agriculture', icon: Wheat, desc: 'Mulching films and protective covers.' },
+        { name: 'Agriculture', icon: Wheat, desc: 'Nursery bags and protective covers.' },
         { name: 'Pharmaceuticals', icon: Pill, desc: 'GMP-certified packaging materials.' },
         { name: 'Logistics', icon: Package, desc: 'Secure courier bags and wrap.' },
         { name: 'Hospitality', icon: Hotel, desc: 'Premium packaging for hotels and restaurants.' },
