@@ -136,7 +136,7 @@ export default function RootLayout({
         "@type": "ContactPoint",
         "telephone": "+91-6359313912",
         "contactType": "sales",
-        "email": "info@maxextrusions.com",
+        "email": "bhavyamistry@maxextrusions.com",
         "areaServed": "IN",
         "availableLanguage": ["English", "Hindi", "Gujarati"]
       },

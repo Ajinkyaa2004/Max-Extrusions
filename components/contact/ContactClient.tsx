@@ -100,7 +100,7 @@ export default function ContactClient() {
                                         </motion.div>
 
                                         <motion.a
-                                            href="mailto:info@maxextrusions.com"
+                                            href="mailto:bhavyamistry@maxextrusions.com"
                                             whileHover={{ scale: 1.02 }}
                                             className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 backdrop-blur-sm hover:bg-white hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 group border border-gray-100/50"
                                         >
@@ -110,7 +110,7 @@ export default function ContactClient() {
                                             <div className="flex-1">
                                                 <div className="font-bold text-gray-900 mb-1">Email Us</div>
                                                 <div className="text-sm text-gray-600 break-all">
-                                                    maxextpvtltd@gmail.com
+                                                    bhavyamistry@maxextrusions.com
                                                 </div>
                                             </div>
                                         </motion.a>

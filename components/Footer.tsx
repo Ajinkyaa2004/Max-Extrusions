@@ -152,8 +152,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-4 text-gray-400">
                 <Mail className="w-5 h-5 text-accent-royal shrink-0" />
-                <a href="mailto:maxextpvtltd@gmail.com" className="hover:text-white transition-colors">
-                  maxextpvtltd@gmail.com
+                <a href="mailto:bhavyamistry@maxextrusions.com" className="hover:text-white transition-colors">
+                  bhavyamistry@maxextrusions.com
                 </a>
               </li>
             </ul>
